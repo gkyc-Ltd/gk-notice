@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <link rel="stylesheet" href="../css/iziToast.css">   
+<script src="./iziToast.js" type="text/javascript"></script>
+<script>
+iziToast.settings({
+    timeout: 10000000,
+    resetOnHover: true,
+    icon: 'material-icons',
+    transitionIn: 'flipInX',
+    transitionOut: 'flipOutX',
+    onOpening: function(){
+        console.log('callback abriu!');
+    },
+    onClosing: function(){
+        console.log("callback fechou!");
+    }
+});
+
+iziToast.show({
+    title: 'Hey',
+    message: 'What would you like to add?'
+});
+</script>
+</body>
+</html>
