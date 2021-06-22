@@ -68,3 +68,15 @@ yarn add vue-izitoast
 ```
 https://github.com/BadAllOff/iziToast-rails
 ```
+
+
+
+### ci cd  规范项目集成eslint commitlint 
+
+npm install --save-dev @commitlint/config-conventional @commitlint/cli npm install husky --save-dev
+https://blog.csdn.net/qq_38290251/article/details/111646491
+这段配置告诉了git hooks，当我们在当前项目中执行 git commit -m '测试提交' 时将触发commit-msg事件钩子并通知husky，从而执行 commitlint -E HUSKY_GIT_PARAMS命令，也就是我们刚开始安装的./node_modules/.bin/commitlint，它将读取commitlint.config.js配置规则并对我们刚刚提交的测试提交这串文字进行校验，若校验不通过，则在终端输出错误，commit终止。
+
+
+### webpack模块化打包彻底搞清楚javascript中的require、import和export
+Requests that start with a name are treated as module requests and resolve within module directories (node_modules).

@@ -3,7 +3,10 @@
  * http://izitoast.marcelodolce.com
  * by Marcelo Dolce.
  */
-
+const  ClipboardJS=  require('./clipboard.js')
+console.log('------------------------------------');
+console.log(ClipboardJS);
+console.log('------------------------------------');
 (function(root, factory) {
   if (typeof define === "function" && define.amd) {
     define([], factory(root));
@@ -750,7 +753,8 @@
           : document.createElement("img"),
         wrapper: null
       };
-
+      //add clipboard coustom attribute
+      $DOM.toast.setAttribute("data-clipboard-text", settings.message);
       $DOM.toast.setAttribute("data-iziToast-ref", settings.ref);
       $DOM.toast.appendChild($DOM.toastBody);
       $DOM.toastCapsule.appendChild($DOM.toast);
@@ -1333,8 +1337,16 @@
           $DOM.toast.addEventListener(
             "mousedown",
             function(e) {
-              const timeId = GenNonDuplicateID(3);
-              copy(timeId, "innerText");
+            //   const timeId = GenNonDuplicateID(3);
+            //   copy(timeId, "innerText");
+      var clipboard = new ClipboardJS( $DOM.toast);
+      clipboard.on('success', function (e) {
+        console.log(e);
+      });
+
+      clipboard.on('error', function (e) {
+        console.log(e);
+      });
               e.preventDefault();
               drag.startMoving(this, that, settings, e);
             },

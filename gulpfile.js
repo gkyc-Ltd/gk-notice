@@ -44,7 +44,7 @@ gulp.task(
   "scripts",
   gulp.series(function() {
     return gulp
-      .src("./src/js/iziToast.js")
+   .src('js/*.js') 
       .pipe(babel())
       .pipe(jshint())
       .pipe(jshint.reporter("default"))
@@ -54,9 +54,28 @@ gulp.task(
       .pipe(concat("iziToast.min.js"))
       .pipe(gulp.dest("./dist/js"))
       .pipe(notify("Scripts build done successfully!"))
-      .pipe(size({ showFiles: true }));
+      .pipe(size({ showFiles: true }))
+
   })
 );
+
+
+
+// gulp.task('toes6', () => {
+// 	gulp.src('./dist/js') //把已经require化的所有js文件的入口文件index.js 进行 browserify 处理和 babel处理 ，最终实现对es6语法的编译
+// 		.pipe(browserify({
+// 			insertGlobals: true,
+// 			debug: !gulp.env.production,
+// 			ignore: ['jquery-3.2.1.min.js']
+// 		}))
+// 		.pipe(babel({
+// 			babelrc: false,
+// 			presets: ['es2015', 'es2016', 'es2017', 'stage-0', 'react'],
+// 			plugins: ['transform-decorators-legacy']
+// 		}))
+// 		.pipe(uglify())
+// 		.pipe(gulp.dest('./dist/js'))
+// })　
 
 // /**
 //  * Watch task

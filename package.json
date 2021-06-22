@@ -10,10 +10,12 @@
     "url": "git+git@github.com:youpengcheng/gk-notice.git"
   },
   "scripts": {
+    "build": "webpack --mode development",
     "set_taobao": "npm config set registry http://registry.npm.taobao.org/",
     "bootstrap": "npm install",
     "clear_taobao": "npm config set registry https://registry.npmjs.org",
-    "publish": "npm publish"
+    "publish": "npm publish",
+    "global_init": "npm install -g npm-check-updates && npm install  -g  rimraf"
   },
   "keywords": [
     "gk-notice",
@@ -38,6 +40,11 @@
   "bugs": {
     "url": "https://github.com/dolce/iziToast/issues"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "homepage": "https://github.com/dolce/iziToast#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -51,7 +58,10 @@
     "gulp-size": "^4.0.1",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
-    "jshint": "^2.13.0"
+    "jshint": "^2.13.0",
+    "path": "^0.12.7",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
     "vue-izitoast": "^1.2.1"
