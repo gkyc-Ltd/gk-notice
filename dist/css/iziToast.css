@@ -35,7 +35,7 @@
   border-color: rgba(238,238,238,0.9);
   width: 100%;
   pointer-events: all;
-  cursor: default;
+  cursor: pointer;
   transform: translateX(0);
   -webkit-touch-callout: none /* iOS Safari */;
   -webkit-user-select: none /* Chrome/Safari/Opera */;

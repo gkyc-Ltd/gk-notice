@@ -1,13 +1,19 @@
 {
   "name": "gk-notice",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "description": "Elegant, responsive, flexible and lightweight notification plugin with no dependencies.=>ypc-toast",
   "readmeFilename": "README.md",
   "main": "dist/js/iziToast.js",
   "typings": "types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dolce/iziToast.git"
+    "url": "git+git@github.com:youpengcheng/gk-notice.git"
+  },
+  "scripts": {
+    "set_taobao": "npm config set registry http://registry.npm.taobao.org/",
+    "bootstrap": "npm install",
+    "clear_taobao": "npm config set registry https://registry.npmjs.org",
+    "publish": "npm publish"
   },
   "keywords": [
     "gk-notice",
@@ -34,15 +40,18 @@
   },
   "homepage": "https://github.com/dolce/iziToast#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-csso": "^3.0.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-size": "^2.1.0",
-    "gulp-stylus": "^2.6.0",
-    "gulp-uglify": "^1.5.1",
-    "jshint": "^2.9.1"
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-size": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.13.0"
   },
   "dependencies": {
     "vue-izitoast": "^1.2.1"
