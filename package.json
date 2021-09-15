@@ -1,6 +1,6 @@
 {
   "name": "gk-notice",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Elegant, responsive, flexible and lightweight notification plugin with no dependencies.=>ypc-toast",
   "readmeFilename": "README.md",
   "main": "dist/js/iziToast.js",

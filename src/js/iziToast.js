@@ -4,9 +4,6 @@
  * by Marcelo Dolce.
  */
 const  ClipboardJS=  require('./clipboard.js')
-console.log('------------------------------------');
-console.log(ClipboardJS);
-console.log('------------------------------------');
 (function(root, factory) {
   if (typeof define === "function" && define.amd) {
     define([], factory(root));
