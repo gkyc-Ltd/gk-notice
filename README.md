@@ -80,3 +80,8 @@ https://blog.csdn.net/qq_38290251/article/details/111646491
 
 ### webpack模块化打包彻底搞清楚javascript中的require、import和export
 Requests that start with a name are treated as module requests and resolve within module directories (node_modules).
+
+
+###  放弃glup 使用webpack   发版注意切换npm淘宝镜像   
+
+glup  打包 css     webpacke 打包js

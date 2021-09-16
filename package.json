@@ -1,6 +1,6 @@
 {
   "name": "gk-notice",
-  "version": "2.0.0",
+  "version": "5.0.0",
   "description": "Elegant, responsive, flexible and lightweight notification plugin with no dependencies.=>ypc-toast",
   "readmeFilename": "README.md",
   "main": "dist/js/iziToast.js",
@@ -13,7 +13,7 @@
     "build": "webpack --mode development",
     "set_taobao": "npm config set registry http://registry.npm.taobao.org/",
     "bootstrap": "npm install",
-    "clear_taobao": "npm config set registry https://registry.npmjs.org",
+    "clear_taobao": "npm config set registry https://registry.npmjs.org && npm set_taobao",
     "publish": "npm publish",
     "global_init": "npm install -g npm-check-updates && npm install  -g  rimraf"
   },
